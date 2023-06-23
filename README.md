@@ -8,6 +8,7 @@ Cold Email Website is a web application that allows users to send cold emails to
 
 - Add multiple sender email addresses.
 - Add multiple receiver email addresses.
+- It pairs each recipient with a random sender to maximize deliverability and avoid spam or promotions folders.
 - Change the secure token used for email authentication.
 - Send emails with a specified subject and message.
 - Supports HTML content in the email body.
