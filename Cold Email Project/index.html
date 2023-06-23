@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cold Email Website</title>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <style>
+    body {
+      background-color: #EAF6FF;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #0048B9;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="email"],
+    input[type="text"],
+    textarea {
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      background-image: linear-gradient(to bottom, #00A6FF, #0072FF);
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-image: linear-gradient(to bottom, #008FF3, #005CDC);
+    }
+
+    #emailForm {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    .inputContainer {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .inputContainer input {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+
+    .removeInputButton {
+      padding: 6px 12px;
+      border-radius: 4px;
+      background-color: #D3D3D3;
+      border: none;
+      color: #333;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .removeInputButton:hover {
+      background-color: #C0C0C0;
+    }
+
+    .textareaContainer {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .textareaContainer label {
+      margin-bottom: 5px;
+    }
+
+    .textareaContainer textarea {
+      flex-grow: 1;
+    }
+
+    #subjectContainer {
+      margin-bottom: 20px; /* Increased margin to create more space */
+    }
+  </style>
+</head>
+<body>
+  <h1>Cold Email</h1>
+
+  <label for="secureToken">Secure Token:</label>
+  <span id="secureTokenDisplay"></span>
+  <button id="changeTokenButton">Change Secure Token</button><br>
+
+  <form id="emailForm">
+    <div id="senderEmailsContainer">
+      <div class="inputContainer">
+        <label for="senderEmail">Sender Email:</label>
+        <input type="email" class="senderEmail" required>
+      </div>
+    </div>
+
+    <button type="button" id="addSenderEmailButton">Add</button><br>
+
+    <div id="receiverEmailsContainer">
+      <div class="inputContainer">
+        <label for="receiverEmail">Receiver Email:</label>
+        <input type="email" class="receiverEmail" required>
+      </div>
+    </div>
+
+    <button type="button" id="addReceiverEmailButton">Add</button><br>
+
+    <div id="subjectContainer">
+      <div class="inputContainer">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" required>
+      </div>
+    </div>
+
+    <div class="textareaContainer">
+      <label for="message">Body:</label>
+      <textarea id="message" required></textarea>
+    </div>
+
+    <button type="submit">Send Email</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
